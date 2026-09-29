@@ -1,0 +1,15 @@
+{
+  "members": [
+    "Cuong",
+    "Khoi",
+    "Lam"
+  ],
+  "assignments": {
+    "Cuong": "B3-mid",
+    "Khoi": "B4-mid",
+    "Lam": "B1-dense"
+  },
+  "self": "Khoi",
+  "slice": "B4-mid",
+  "degrade": []
+}
