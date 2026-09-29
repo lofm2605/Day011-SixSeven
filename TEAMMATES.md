@@ -16,9 +16,9 @@
 
 | Vai | Họ và tên | MSSV | Tên định danh trong mode | Trách nhiệm | Bằng chứng đóng góp |
 |---|---|---|---|---|---|
-| A · Gán nhãn | [Lê Minh Khôi] | [2A202602163] | Khoi | Parking/C0/slice, self-QC, lock, rework | [Link file/commit và mô tả phần đã làm] |
-| B · QA độc lập | [Lê Hùng Cường] | [2A20260218] | [Cuong] | Review trước reference, finding QA, kiểm lại ca sửa | [Link file/commit và mô tả phần đã làm] |
-| C · Chẩn đoán & điều phối | [Vũ Tùng Lâm] | [2A202602181] | [Lam] | Báo cáo, phân xử, kế hoạch, tích hợp, check và nộp | [Link file/commit và mô tả phần đã làm] |
+| A · Gán nhãn | Lê Minh Khôi | 2A202602163 | Khoi | Parking/C0/slice, self-QC, lock, rework | [Link file/commit và mô tả phần đã làm] |
+| B · QA độc lập | Lê Hùng Cường | 2A202602218 | Cuong | Review trước reference, finding QA, kiểm lại ca sửa | [Link file/commit và mô tả phần đã làm] |
+| C · Chẩn đoán & điều phối | Vũ Tùng Lâm | 2A202602181 | Lam | Báo cáo, phân xử, kế hoạch, tích hợp, check và nộp | [Link file/commit và mô tả phần đã làm] |
 
 Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thuộc quy trình nhiều hồ sơ của CLI; nhóm dùng một slice chung (B4-mid) và quy trình A → B → C đã nêu trong hướng dẫn.
 
