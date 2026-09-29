@@ -55,9 +55,9 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 
 ## 5. Xác nhận trước khi nộp
 
-- [ ] A xác nhận nhãn và export đúng phiên bản: Lê Minh Khôi — r1_craft lock 2AA4-1FBB, rework lock2 605F-D50D (Khôi tự tick sau khi kiểm)
+- [X] A xác nhận nhãn và export đúng phiên bản: Lê Minh Khôi — r1_craft lock 2AA4-1FBB, rework lock2 605F-D50D
 - [x] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: Lê Hùng Cường — r2_qa/qa_review.md (QA 9cd56a2 trước khi mở reference 48f1c73; ký phần kiểm lại P5)
 - [x] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: Vũ Tùng Lâm — local_quality.json khớp sha256 r1_craft; intact_lock OK cho calib/r1_craft/rework; `check` exit 0
 - [x] manifest.json tại commit chốt có failed_gates rỗng.
 - [x] Repo nhóm Public, ảnh và các bằng chứng mở được.
-- [ ] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
+- [X] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
