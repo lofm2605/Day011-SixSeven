@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>32</id>
+      <size>1</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2026-09-29 03:53:40.961885+00:00</created>
+      <updated>2026-09-29 04:11:01.888921+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>0</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>32</id>
+          <start>0</start>
+          <stop>0</stop>
+          <url>http://localhost:8080/api/jobs/32/dataset/export/api/jobs/32</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>KhoiLe</username>
+        <email>khoileminh1719@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>parking_line</name>
+          <color>#ffcc00</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>free_space</name>
+          <color>#35c98b</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2026-09-29 04:11:05.610554+00:00</dumped>
+  </meta>
+  <image id="0" name="parking-lot-core.jpg" width="960" height="720">
+    <polyline label="parking_line" source="manual" occluded="0" points="26.55,682.16;23.22,720.00" z_order="0">
+    </polyline>
+    <polyline label="parking_line" source="manual" occluded="0" points="529.27,720.00;404.91,651.93" z_order="0">
+    </polyline>
+    <polyline label="parking_line" source="manual" occluded="0" points="959.34,684.35;694.16,622.03" z_order="0">
+    </polyline>
+    <polygon label="free_space" source="manual" occluded="0" points="0.00,648.53;0.65,682.60;636.54,631.22;921.52,589.50;960.00,575.42;960.00,528.44;959.50,510.43;835.17,530.66;712.25,538.30;421.59,557.64;238.32,567.49;0.00,574.91" z_order="0">
+    </polygon>
+  </image>
+</annotations>
