@@ -1,0 +1,9 @@
+round: rework
+slice: B4-mid
+sha256: 605fd50d70a45d5e62595fc1bc3134b251b6cdf4d2bf00265b923df5b656af1d
+code: 605F-D50D
+locked_at: 2026-09-29T16:52:07+07:00
+shapes: box=18, polygon=13
+prefill_kept: 1
+prefill_edited: 0
+new: 17
