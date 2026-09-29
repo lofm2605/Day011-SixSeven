@@ -4,8 +4,11 @@
 đã nằm trong file tương ứng nên không hỏi lại ở đây.
 
 1. Một vật ở vùng seam giữa hai camera thật xuất hiện với hai box khác nhau: đó là lỗi `DUPLICATE` hay cần một quy
-   tắc riêng? Vì sao? TODO
+   tắc riêng? Vì sao? **Cần một quy tắc riêng, không tự tính là `DUPLICATE`.** Trên mỗi camera, box đó là nhãn đúng của ảnh gốc camera ấy (có thể ở zone edge của camera này và mid của camera kia, hình dạng khác nhau do méo fisheye). `DUPLICATE` chỉ đúng khi hai box trùng nhau **trên cùng một ảnh**. Muốn gộp hai box thành một vật cần timestamp đồng bộ, calibration để chiếu về cùng hệ tọa độ (vd BEV) và policy output đích (giữ box theo từng camera hay hợp nhất). Khi chưa có, giữ cả hai box, đánh dấu ca seam và đưa người soát quyết định (xem `46_gold_set_plan.md`).
 2. Một vật đi qua nhiều frame trên cùng camera: khi nào giữ cùng track ID, khi nào thêm keyframe hoặc trạng thái
-   Outside? Nêu bằng chứng sẽ cần trước khi nối track qua hai camera. TODO
+   Outside? Nêu bằng chứng sẽ cần trước khi nối track qua hai camera. Giữ cùng track ID khi vẫn là cùng vật và còn quan sát được liên tục (kể cả bị che ngắn nhưng vị trí/hình dạng nhất quán). Thêm **keyframe** khi hình học đổi lớn — ví dụ vật đi từ center ra edge bị méo, đổi hướng, hoặc bắt đầu bị vòng kính cắt (truncated) hay bị che (occluded). Đặt **Outside** khi vật ra khỏi trường nhìn/vòng kính hoặc bị che hoàn toàn; khi xuất hiện lại chỉ nối cùng ID nếu có bằng chứng là cùng vật. Trước khi nối track qua hai camera cần: timestamp đồng bộ, calibration/extrinsic của hai camera, vùng seam đã xác định, bằng chứng nhận dạng (vị trí chiếu, vận tốc, hình dạng/màu) và policy output — thiếu một trong các điều kiện thì không nối.
 3. Nhìn lại cả buổi: một chỗ bạn tin nhãn mình đúng nhưng reference hoặc người soát nghĩ khác (dẫn frame/`object_ref`),
-   bạn đã xử lý thế nào, và nếu làm lại slice này bạn sẽ đổi gì trong cách làm? TODO
+   bạn đã xử lý thế nào, và nếu làm lại slice này bạn sẽ đổi gì trong cách làm? Ca `adasind_265065.jpg` **L5** (r1_craft): A vẽ xe máy đỗ cạnh biển XEROX (47 px ≥ 40, R01); reference và model đều không có, báo cáo tính SPURIOUS. B lại chỉ ra box này đánh `truncated=true` sai (R05). Nhóm tách hai ý: sửa thuộc tính ở rework (truncated=false, occluded=true) nhưng **giữ box** và escalate nghi reference thiếu (E0, decision log D4, ticket 1) thay vì xóa để khớp số. Ngược lại, ở R7 cùng frame reference có người mà nhóm không chắc → ghi E5_unresolved (D7), không thêm cho đủ. Nếu làm lại: soát riêng vùng lề đường đông trước khi khóa (4 vật bị sót đều ở đó), xử lý hết cảnh báo `truncated` của self-QC thay vì để sang QA, và thêm `.gitattributes` ngay từ đầu để mã khóa không bị lệch khi pull trên Windows.
+
+Đóng góp: Lâm (C) tổng hợp câu trả lời từ thảo luận nhóm; Khôi (A) cung cấp ca L5 và rework; Cường (B) cung cấp nhận xét R05/R04.
+Xác nhận: [X] Khôi (A) · [X] Cường (B) · [X] Lâm (C)

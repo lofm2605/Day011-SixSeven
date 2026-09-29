@@ -28,4 +28,4 @@ không làm thay phần lý do.
   khác nhau, nên lỗi ở camera này không suy ra phân bố lỗi ở camera khác. Cần review độc lập và đo riêng trên từng
   camera trước khi gọi là gold.
 
-Người soạn: Lâm (C). Người kiểm: [A/B điền tên sau khi đọc]. Sẽ bổ sung ví dụ lỗi cụ thể sau khi đọc báo cáo P4.
+Người soạn: Lâm (C). Người kiểm: Cuong. Sẽ bổ sung ví dụ lỗi cụ thể sau khi đọc báo cáo P4.
