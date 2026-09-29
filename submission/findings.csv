@@ -1,9 +1,37 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
-calib,C0,adasind_019560.jpg,L1,na,SPURIOUS,,,,,,,,
-r1_craft,B4-mid,adasind_261480.jpg,L2,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,"Box o gan mep chua ro truncated can QA xac nhan"
-r1_craft,B4-mid,adasind_261480.jpg,L3,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,"Box o gan mep chua ro truncated can QA xac nhan"
-r1_craft,B4-mid,adasind_265065.jpg,L5,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,"Box o gan mep chua ro truncated can QA xac nhan"
+calib,C0,adasind_019560.jpg,L1,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,p1_calib/compare.html L1 center; L1 Pedestrian nam trong L2 Bike,keep_with_reason,v1.0.0,Nguoi ngoi lai tren xe hai banh bi ve box Pedestrian rieng; theo R03 rider + xe = 1 Bike. C0 chi de hieu chuan nen khong rework; bai hoc ap dung cho B4-mid
+r1_craft,B4-mid,adasind_261480.jpg,L2,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,Box o gan mep chua ro truncated can QA xac nhan
+r1_craft,B4-mid,adasind_261480.jpg,L3,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,Box o gan mep chua ro truncated can QA xac nhan
+r1_craft,B4-mid,adasind_265065.jpg,L5,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,Box o gan mep chua ro truncated can QA xac nhan
 r2_qa,B4-mid,adasind_261480.jpg,L2,L_only,ATTRIBUTE,,,,R05,truncated=true nhung box khong cham vong kinh,,v1.0.0,QA xac nhan doc lap R05
 r2_qa,B4-mid,adasind_261480.jpg,L3,L_only,ATTRIBUTE,,,,R05,truncated=true gan mep trai chua cham x=0,,v1.0.0,QA xac nhan doc lap R05
 r2_qa,B4-mid,adasind_265065.jpg,L5,L_only,ATTRIBUTE,,,,R05,truncated=true nam giua khung,,v1.0.0,QA xac nhan doc lap R05
 r2_qa,B4-mid,adasind_265065.jpg,L6,L_only,WRONG_CLASS,,,,R04,xe tai con danh nham Car,,v1.0.0,QA quan sat class theo R04
+r1_craft,B4-mid,adasind_261480.jpg,L2+R6,na,ATTRIBUTE,,,,,,,,
+r1_craft,B4-mid,adasind_261480.jpg,L3+R5,na,ATTRIBUTE,,,,,,,,
+r1_craft,B4-mid,adasind_265065.jpg,L5,na,SPURIOUS,,,,,,,,
+r1_craft,B4-mid,adasind_265065.jpg,L6+R3,na,WRONG_CLASS,,,,,,,,
+r1_craft,B4-mid,adasind_265065.jpg,R5,na,MISSING,,,,,,,,
+r1_craft,B4-mid,adasind_265065.jpg,R6,na,MISSING,,,,,,,,
+r1_craft,B4-mid,adasind_265065.jpg,R7,na,MISSING,,,,,,,,
+r3_diag,B4-mid,adasind_249480.jpg,M2,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R03,r3_diag/model_compare.html 249480 M2; nguoi ngoi sau tren L1 Bike,keep_with_reason,v1.0.0,Model tach rider thanh Pedestrian; L va R dung R03 (1 box Bike)
+r3_diag,B4-mid,adasind_249480.jpg,M4,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R03,r3_diag/model_compare.html 249480 M4; nguoi lai tren L1 Bike,keep_with_reason,v1.0.0,Nhu M2: model box rider rieng; cung xe co 2 nguoi ngoi
+r3_diag,B4-mid,adasind_249480.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R01,r3_diag/model_compare.html 249480 M6 edge; hang hoa tren noc L2 Truck,keep_with_reason,v1.0.0,Model nhan bao hang tren noc xe tai la Pedestrian; khong phai vat trong 6 class
+r3_diag,B4-mid,adasind_261480.jpg,L2+R6,LR_noM,MISSING,E4_model_domain,P1,ai_team,R04,r3_diag/model_compare.html 261480 L2+R6; M6 Car trung box,escalate,v1.0.0,Model khong co class ThreeWheeler nen goi auto-rickshaw la Car (M6); 3 ca trong cung frame
+r3_diag,B4-mid,adasind_261480.jpg,L7+R4,LR_noM,MISSING,E4_model_domain,P1,ai_team,R04,r3_diag/model_compare.html 261480 L7+R4; M10 Car + M12 Truck trung box,escalate,v1.0.0,Cung ca ThreeWheeler bi model goi Car/Truck; xem screenshots/qa_261480_L7_ThreeWheeler.png
+r3_diag,B4-mid,adasind_261480.jpg,L3+R5,LR_noM,MISSING,E4_model_domain,P1,ai_team,R04,r3_diag/model_compare.html 261480 L3+R5; M8 Car trung box,escalate,v1.0.0,Ca thu 3 ThreeWheeler -> Car trong 261480
+r3_diag,B4-mid,adasind_261480.jpg,M2,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R03,r3_diag/model_compare.html 261480 M2; rider tren L5 Bike,keep_with_reason,v1.0.0,Model box rider rieng; L/R dung R03
+r3_diag,B4-mid,adasind_261480.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R03,r3_diag/model_compare.html 261480 M5; rider tren L4 Bike,keep_with_reason,v1.0.0,Model box rider rieng o mep trai
+r3_diag,B4-mid,adasind_261480.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,r3_diag/model_compare.html 261480 M6 trung L2 ThreeWheeler,keep_with_reason,v1.0.0,"Cap voi dong L2+R6: model sai class, khong phai vat thua"
+r3_diag,B4-mid,adasind_261480.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,r3_diag/model_compare.html 261480 M8 trung L3 ThreeWheeler,keep_with_reason,v1.0.0,Cap voi dong L3+R5
+r3_diag,B4-mid,adasind_261480.jpg,M10,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,r3_diag/model_compare.html 261480 M10 trung L7 ThreeWheeler,keep_with_reason,v1.0.0,Cap voi dong L7+R4
+r3_diag,B4-mid,adasind_261480.jpg,M11,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R01,r3_diag/model_compare.html 261480 M11 nam trong L4 Bike,keep_with_reason,v1.0.0,Box manh nho ben trong xe may L4; khong phai vat rieng
+r3_diag,B4-mid,adasind_261480.jpg,M12,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,r3_diag/model_compare.html 261480 M12 trung M10,keep_with_reason,v1.0.0,Model ra 2 box Car + Truck cho cung 1 ThreeWheeler (trung lap)
+r3_diag,B4-mid,adasind_261480.jpg,M13,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R01,r3_diag/model_compare.html 261480 M13 trung M9 (L5 Bike),keep_with_reason,v1.0.0,Model ra 2 box cho cung xe may lon o rieng
+r3_diag,B4-mid,adasind_265065.jpg,L5,L_only,SPURIOUS,E0_reference_defect,P1,qa,R01,screenshots/qa_265065_L5_truncated_L6_pickup.png; r3_diag/model_compare.html 265065 L5,escalate,v1.0.0,"Xe may do canh bien XEROX cao 47 px (>=40) nhin thay tren anh; R va M deu khong co. Giu box; sua truncated=false, occluded=true (bi bien che) o rework; escalate de soat reference"
+r3_diag,B4-mid,adasind_265065.jpg,L6,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R04,screenshots/qa_265065_L5_truncated_L6_pickup.png; r3_diag/local_quality_conflicts.csv mismatching_label L6/R3,rework,v1.0.0,"Xe tai nho co thung hang, R3 va M1 deu la Truck; B da neu o QA. Sua class Car -> Truck"
+r3_diag,B4-mid,adasind_265065.jpg,R3+M1,RM_noL,MISSING,E1_annotator_error,P1,annotator,R04,r3_diag/model_compare.html 265065 R3+M1,rework,v1.0.0,Cung vat voi L6 (sai class nen khong ghep); sua L6 thanh Truck se dong ca dong nay
+r3_diag,B4-mid,adasind_265065.jpg,R5+M7,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,r3_diag/model_compare.html 265065 R5+M7; ben trai xe tai,rework,v1.0.0,Xe tay ga cao ~54 px canh xe tai bi bo sot; them box Bike
+r3_diag,B4-mid,adasind_265065.jpg,R6+M6,RM_noL,MISSING,E1_annotator_error,P1,annotator,R03,r3_diag/model_compare.html 265065 R6+M6,rework,v1.0.0,Nguoi dung canh xe tay ga (khong ngoi lai) cao ~60 px bi bo sot; them Pedestrian rieng theo R03
+r3_diag,B4-mid,adasind_265065.jpg,R7,R_only,MISSING,E1_annotator_error,P1,annotator,R01,r3_diag/model_compare.html 265065 R7 (R_only),rework,v1.0.0,"Nguoi ao trang bi nguoi khac che mot phan, cao ~63 px; L va M deu sot. Them Pedestrian, occluded=true"
+r3_diag,B4-mid,adasind_265065.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R01,r3_diag/model_compare.html 265065 M8 trung M7,keep_with_reason,v1.0.0,Model ra 2 box cho cung xe tay ga R5
