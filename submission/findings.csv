@@ -1,2 +1,5 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
 calib,C0,adasind_019560.jpg,L1,na,SPURIOUS,,,,,,,,
+r1_craft,B4-mid,adasind_261480.jpg,L2,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,"Box o gan mep chua ro truncated can QA xac nhan"
+r1_craft,B4-mid,adasind_261480.jpg,L3,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,"Box o gan mep chua ro truncated can QA xac nhan"
+r1_craft,B4-mid,adasind_265065.jpg,L5,L_only,ATTRIBUTE,,,,R05,canh bao truncated khac du kien,,v1.0.0,"Box o gan mep chua ro truncated can QA xac nhan"
