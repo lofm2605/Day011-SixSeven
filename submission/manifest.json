@@ -183,12 +183,12 @@
     {
       "file": "46_gold_set_plan.md",
       "lines": 31,
-      "sha256": "748c47b85a86c9d966fceeab79e7a08ab0822d96bc6aa752805c627a1bbbf13f"
+      "sha256": "274c12cb566b6ad68424c6983a7497a1730ae417ff9600e74592affcb8fe26c1"
     },
     {
       "file": "50_exit_ticket.md",
       "lines": 14,
-      "sha256": "df26e94eb62dbb77fafaf6be7fbf5ab28e3eea88b61ecbe12f7021f05ca413bf"
+      "sha256": "a995bf076afc3d55d3140a8e05181e8a1642764dae9939a9e7cf8ad3642494ca"
     }
   ],
   "failed_gates": []
