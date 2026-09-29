@@ -11,4 +11,3 @@
 - adasind_265065.jpg R3+M1 MISSING: đã sửa
 - adasind_265065.jpg R5+M7 MISSING: đã sửa
 - adasind_265065.jpg R6+M6 MISSING: đã sửa
-- adasind_265065.jpg R7 MISSING: chưa sửa
