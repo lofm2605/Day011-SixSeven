@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,25,"Ban ngay duong thong thoang; vat o center/mid it bien dang","Moc so sanh cho front; lay rai theo thoi gian (toi da 1 frame moi 5 giay cung canh) de khong dem trung canh lien tiep"
+front,hard,30,"Giao thong dong; xe ba banh va pickup de nham class (R04); vat xa sat nguong 40 px (R01)","Tren ADASIND da thay nham pickup thanh Car (265065 L6) va nhieu ThreeWheeler; front gap mat do cao nhat nen can nhieu ca kho nhat"
+rear,normal,20,"Xe theo sau o giua anh; than xe ego che mot phan","Can moc de kiem ego_body va lens_border tren camera rear; it vat hon front nen it frame hon"
+rear,hard,25,"Lui xe/do xe; vat rat gan bi vong kinh cat (truncated) va bi than xe che (occluded)","Loi truncated la loi chinh o r1_craft (3 box); rear khi lui xe co nhieu vat sat vong kinh nhat"
+left,normal,20,"Le duong trai: nguoi di bo va xe may dung yen","Moc so sanh cho camera ben; phan bo it vi canh le duong lap lai nhieu"
+left,hard,30,"Xe may vuot sat; rider va nguoi dat xe (R03); vat o zone edge bi keo cong","Camera ben thay vat o edge nhieu nhat; seam voi front/rear nen can nhieu ca de viet policy ghep box"
+right,normal,20,"Lan xe nguoc chieu/lan giua o mid","Moc so sanh cho right; lay o nhieu doan duong khac nhau"
+right,hard,30,"Xe to (bus/truck) di qua chiem nua anh; nhieu vat chong nhau; seam voi front","Box lon o edge de sai geometry va truncated; vung seam right-front can bang chung truoc khi ghep box"
