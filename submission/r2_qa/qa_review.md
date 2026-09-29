@@ -36,7 +36,8 @@ Các ca thêm từ chẩn đoán P4 (D3):
 
 Quan sát mới:
 - 265065 v2 L1 Pedestrian (x 283–299, y 765–813, cao 48 px, sau xe tải) là box **mới**, không có trong R và M, đang bị tính spurious ở zone center. Trên ảnh có hình người áo sáng nhưng mờ. Cần A xác nhận đây là người thật (→ giữ, ghi E0 nghi reference thiếu) hay đặt nhầm (→ xóa và khóa lại).
+  → **Đã xử lý:** phóng to ảnh gốc thấy rõ người áo trắng đứng sau xe tải → giữ box, E0, gộp vào ticket 1 (decision log D8).
 
-Kết luận: 4/4 nhận xét QA ban đầu và 2/2 ca thiếu được giao đã sửa đúng; còn mở 1 ca mới (v2 L1) chờ A trả lời.
+Kết luận: 4/4 nhận xét QA ban đầu và 2/2 ca thiếu được giao đã sửa đúng; ca mới v2 L1 đã phân xử (D8).
 
 - [X] Cường (B) xác nhận đã đọc và đồng ý kết quả kiểm lại: Cuong

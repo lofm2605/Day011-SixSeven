@@ -4,7 +4,7 @@
 
 - **Frame:** `adasind_265065.jpg`, box L5 ở r1_craft (= L8 ở rework v2), [423, 781, 459, 828], zone center
 - **Ảnh chụp:** `submission/screenshots/qa_265065_L5_truncated_L6_pickup.png`
-- **Vấn đề:** xe máy đỗ cạnh biển XEROX, cao 47 px (≥ 40, R01), nhìn thấy trên ảnh gốc, bị biển che một phần. Nhãn của nhóm có box; **teaching reference và model đều không có** → báo cáo tính là SPURIOUS (findings r3_diag `L5`, E0_reference_defect; decision log D4). Cùng frame còn box Pedestrian mới ở rework v2 (L1, x 283–299) chỉ nhóm có, đang chờ xác nhận.
+- **Vấn đề:** xe máy đỗ cạnh biển XEROX, cao 47 px (≥ 40, R01), nhìn thấy trên ảnh gốc, bị biển che một phần. Nhãn của nhóm có box; **teaching reference và model đều không có** → báo cáo tính là SPURIOUS (findings r3_diag `L5`, E0_reference_defect; decision log D4). Cùng frame, ở rework v2 nhóm thêm Pedestrian L1 [283, 765, 299, 813] — người áo trắng đứng sau xe tải, cao 48 px, bị xe tải che một phần; R và M cũng không có (finding round rework `L1`, E0; decision log D8).
 - **Expected impact:** nếu reference thiếu, precision của mọi người gán nhãn đúng trên frame này bị hạ oan; nếu dùng reference này làm gold, model sẽ học bỏ qua xe đỗ bị che một phần.
 - **Owner:** `qa`
 - **Recommendation:** người quản lý reference xem lại 265065 (L5 và vùng sau xe tải, x 283–299), quyết định thêm vào reference hay ghi lý do loại (ví dụ `unreadable`); cập nhật `rules_version` nếu cần luật cho xe đỗ bị che. Cho đến khi có quyết định, nhóm giữ box và không tính ca này là lỗi người gán.
